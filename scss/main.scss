@@ -16,6 +16,15 @@
   }
 }
 
+@mixin fancy-links {
+  a {
+    font-style: italic;
+    text-decoration: none;
+  }
+}
+
+@include fancy-links;
+
 body {
   font-family: sans-serif;
   color: $text-color;
