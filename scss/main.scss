@@ -1,6 +1,7 @@
-$text-color: #222222;
-
-$header-height: 60px;
+/*
+ *
+ */
+@import "variables";
 
 body {
   font-family: sans-serif;
@@ -8,22 +9,25 @@ body {
 }
 
 h1, h2, h3, h4 {
-  
+  font-family: $headline-font;
 }
 
 p {
-  
+  font-family: $text-font;
 }
 
 a {
-
+  color: $link-color;
 }
 
 #header {
   height: $header-height;
+  background-color: $theme-color;
 
   #main-menu {
-
+    a {
+      color: $menu-item-color;
+    }
   }
   
   #logo {
@@ -32,6 +36,7 @@ a {
 }
 
 #main {
+  $width: $content-width;
 
   #content {
   }
@@ -41,5 +46,6 @@ a {
 }
 
 #footer {
-
+  height: $footer-height;
+  background-color: $ternary-color;
 }
