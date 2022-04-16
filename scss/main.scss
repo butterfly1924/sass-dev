@@ -1,12 +1,16 @@
 
-@import "variables";
-@import "mixins";
+@import "partials/variables";
+@import "partials/mixins";
+
+@include google-font("Alegreya+Sans");
+@include google-font("Titillium+Web");
 
 @include fancy-links;
 
 body {
   font-family: sans-serif;
   color: $text-color;
+
 }
 
 h1, h2, h3, h4 {
@@ -30,6 +34,12 @@ a {
   padding: 8px 12px;
 }
 
+@include apply-to-ie-6 {
+  body {
+    font-size: 125%;
+  }
+}
+
 #header {
   @include box($border: 1px solid #fff, $radius: 12px);
   @include box-shadow(2px 0px 4px #999, 1px 1px 6px $secondary-color);
@@ -49,6 +59,11 @@ a {
 
 #main {
   $width: $content-width;
+  
+  @media (max-width: 320px) {
+    width: auto;
+    max-width: $content-width;
+  }
 
   #content {
   }
